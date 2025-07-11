@@ -18,6 +18,12 @@ body {
     margin: 0 auto;
 }
 
+.row__narrow {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .container {
     padding: 96px 0;
 }
@@ -31,6 +37,10 @@ ul {
     display: flex;
 }
 
+img {
+ width: 100%;
+}
+
 li {
     list-style-type: none;
 }
@@ -39,17 +49,6 @@ h1 {
     font-size: 48px;
     color: #1a202c;
     line-height: 1.25;
-}
-
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0;
-    font-weight: bold;
-    unicode-bidi: isolate;
 }
 
 .purple {
@@ -61,7 +60,7 @@ section {
 }
 
 .section__title {
-    font-size: 48;
+    font-size: 48px;
     font-weight: 900;
     color: rgb(36, 62, 99);
     line-height: 1.5;
@@ -74,6 +73,14 @@ section {
     font-weight: 500;
     color: #7c8ba1;
     line-height: 1.625;
+}
+
+.section__tag {
+    font-size: 16px;
+    color: #6415ff;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 #features .section__title #pricing .section__title {
@@ -89,9 +96,7 @@ a {
     text-decoration: none;
 }
 
-.img {
-    width: 100%;
-}
+
 
 /*
 
@@ -99,11 +104,16 @@ NAVBAR
 
 */
 
-.nav {
+nav {
     display: flex;
-    padding-top: 32PX 12px;
+    padding-top: 32px;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav_row {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav__container {
@@ -143,10 +153,14 @@ NAVBAR
 }
 
 .nav__link {
-    margin-left: 16px;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 4px;
+    letter-spacing: 0.35px;
+    margin: 0 24px;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    transition: all 300ms ease;
 }
 
 .nav__link--primary {
@@ -358,9 +372,6 @@ FEATURES
 }
 
 #features .row__narrow {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,21 +380,6 @@ FEATURES
 #features .section__para {
     text-align: center;
     max-width: 576px;
-}
-
-.section__tag {
-    font-size: 16px;
-    color: #6415ff;
-    letter-spacing: 1.6px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.section__para {
-    font-size: 18px;
-    font-weight: 500;
-    color: #7c8ba1;
-    line-height: 1.625;
 }
 
 .features {
@@ -407,6 +403,7 @@ FEATURES
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 500px;
+
 }
 
 .feature__img {
@@ -420,13 +417,23 @@ FEATURES
 }
 
 .feature__para {
-    margin-top: 26px;
+    margin-top: 16px;
     font-size: 16px;
     max-width: calc(634 / 3);
     color: rgb(124, 139, 161);
     line-height: 2;
     font-weight: 500;
 
+}
+
+.features__blob {
+    transform: translateX(96px) translateY(192px) scaleX(1) scaleY(1);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 16rem;
+    opacity: 0.25;
+    padding: 16px;
 }
 
 /*
@@ -441,7 +448,7 @@ QUALITIES
     align-items: center;
 }
 
-#quality .section__title, #values .section__title {
+#quality .section__title {
     line-height: 1.25;
 }
 
@@ -450,26 +457,26 @@ QUALITIES
 }
 
 .quality__description {
- max-width: 576px;
- margin-right: 64px;
- display: flex;
- flex-direction: column;
+    width: 50%;
+    margin-right: 64px;
+    display: flex;
+    flex-direction: column;
 }
 
-.quality__description .quality__img--wrapper {
-    width: 50%;
+.quality__img {
+    width: 100%;
+    z-index: 1;
 }
 
 .quality__img--wrapper {
     border-radius: 4px;
     border: 1px solid rgb(229, 231, 235);
+    width: 50%;
     position: relative;
     margin: 0 56px;
     z-index: 2;
-}
-
-.quality__img {
-    z-index: 1;
+    display: flex;
+    
 }
 
 .quality__grid {
@@ -482,7 +489,7 @@ QUALITIES
     fill: rgb(100, 21, 255);
     --tw-text-opacity: 1;
     color: rgba(100, 21, 255, var(--tw-text-opacity));
-    z-index: 0;
+    z-index: -1;
     display: block;
 }
 
@@ -499,12 +506,17 @@ STEPS
     align-items: center;
 }
 
+#steps .section__title {
+    font-size: 46px;
+}
+
 .steps__img--wrapper {
     display: flex;
     position: relative;
 }
 
 .steps__img {
+    width: 100%;
     z-index: 2;
 }
 
@@ -564,6 +576,12 @@ VALUES
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#values .section__title {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    line-height: 1.25;;
 }
 
 #values .btn {
