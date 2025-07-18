@@ -97,7 +97,6 @@ a {
 }
 
 
-
 /*
 
 NAVBAR
@@ -866,8 +865,9 @@ TESTIMONIALS
 }
 
 .testimonial__title {
-    margin-bottom: 8px;
+    margin-top: 16px;
 }
+
 
 .testimonial__para {
     margin: 16px 0px 40px 0;
@@ -887,10 +887,14 @@ TESTIMONIALS
     align-items: center;
 }
 
-.testimonials__img {
+.testimonial__img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+
+.fa-star {
+    color: rgba(246, 173, 85);
 }
 
 .testimonial__details {
@@ -912,6 +916,7 @@ TESTIMONIALS
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
     padding: 16px;
     background: #edf2f7;
     border-radius: 50%;
@@ -1200,6 +1205,11 @@ MEDIA
 
     #pricing .row {
         margin-top: 40px;
+    }
+
+    .quality__img--wrapper,
+    .quality__img--wrapper {
+        width: 100%;
     }
 }
 
