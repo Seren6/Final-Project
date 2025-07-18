@@ -245,9 +245,8 @@ header .row {
 }
 
 .header__img--wrapper {
-    width: 100%;
+    width: 60%;
     z-index: 2;
-
 }
 
 .header__description--para {
@@ -403,7 +402,6 @@ FEATURES
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 500px;
-
 }
 
 .feature__img {
@@ -1160,7 +1158,10 @@ footer {
     transition: all 300ms ease;
 }
 
-
+.footer__social--link svg {
+    width: 16px;
+    height: 16px;
+}
 
 
 
