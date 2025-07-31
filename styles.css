@@ -1214,7 +1214,7 @@ MEDIA
     }
 }
 
-@media (mac-width: 640px) {
+@media (max-width: 640px) {
     .container {
         padding: 80px 0;
     }
@@ -1225,6 +1225,16 @@ MEDIA
     }
 
     main {
-        margin-bottom: 90px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 558px) {
+    .btn__menu {
+        display: block;
+    }
+   
+    .nav__links {
+        display: none;
     }
 }
