@@ -1450,6 +1450,10 @@ MEDIA
 .footer__socials {
     margin-left: 0px;
 }
+
+.footer__social--link:first-child {
+    margin-left: 0px;
+}
 }
 
 
