@@ -354,7 +354,7 @@ header .row {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
-    margin-bottom: 8px 0;
+    margin-bottom: 16px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
@@ -364,6 +364,7 @@ header .row {
     padding: 12px 32px;
     background: #6415ff;
     border-radius: 500px;
+    margin-top: 32px;
     border: none;
 }
 
@@ -1329,7 +1330,7 @@ MEDIA
     .plans {
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 200%;
 
     }
