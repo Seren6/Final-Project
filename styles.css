@@ -209,9 +209,15 @@ button {
 
 .btn__menu {
     display: none;
-    background: transparent;
+    background-color: transparent;
     border: none;
     transition: all 300ms ease;
+}
+
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
 }
 
 .btn__menu--svg:hover {
@@ -306,7 +312,7 @@ header .row {
     opacity: 0.5;
 }
 
-.modal {
+.menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -324,13 +330,18 @@ header .row {
     transition: all 300ms ease;
 }
 
-.menu--open .modal {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0%);
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
-.modal__links {
+.menu--open .menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu__links {
     width: 100%;
     height: 100%;
     display: flex;
@@ -338,16 +349,17 @@ header .row {
     align-items: center;
 }
 
-.modal__link {
+.menu__link {
     color: #1a202c;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
+    margin-bottom: 8px 0;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
 
-.modal__link--primary {
+.menu__link--primary {
     color: #f7fafc;
     padding: 12px 32px;
     background: #6415ff;
@@ -680,6 +692,7 @@ PRICING
 
 .plans {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     position: relative;
@@ -726,6 +739,7 @@ PRICING
     padding: 16px 32px;
     border-radius: 500px;
     border: none;
+    width: 100%;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -1204,7 +1218,8 @@ MEDIA
     }
 
     .plan__bottom {
-        padding: 32px 64px;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .plan__button {
@@ -1313,11 +1328,14 @@ MEDIA
 
     .plans {
         flex-direction: column;
-       align-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 200%;
+
     }
 
     .plan {
-        margin-right: 0;
+        margin-right: 0px;
     }
 
     .start__row {
@@ -1442,18 +1460,18 @@ MEDIA
 
     }
 
-.footer__copyright,
-.footer__socials {
-    margin-top: 32px;
-}
+    .footer__copyright,
+    .footer__socials {
+        margin-top: 32px;
+    }
 
-.footer__socials {
-    margin-left: 0px;
-}
+    .footer__socials {
+        margin-left: 0px;
+    }
 
-.footer__social--link:first-child {
-    margin-left: 0px;
-}
+    .footer__social--link:first-child {
+        margin-left: 0px;
+    }
 }
 
 
@@ -1492,7 +1510,7 @@ MEDIA
         margin: 16px 0;
         margin-bottom: 0px;
         line-height: 1.5;
-        
+
     }
 
     .header__customers--title {
@@ -1542,7 +1560,7 @@ MEDIA
     }
 
     .plan__bottom {
-        padding: 32px 48px;
+        padding: 2rem 1rem;
     }
 
     .testimonial__para {
